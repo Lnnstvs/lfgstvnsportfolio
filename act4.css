@@ -1,0 +1,602 @@
+/* --- Black Mango Font --- */
+            @font-face {
+                font-family: 'Black Mango';
+                src: url('Fonts_Portfolio/BlackMango-Black.ttf') format('truetype');
+                font-weight: 900; /* 'Black' usually implies a very heavy weight */
+                font-style: normal;
+                font-display: swap;
+            }
+
+
+            /* --- Add this if .about-header doesn't exist or needs specific styling --- */
+            .about-header {
+                /* If this is the direct container for h1 and you want h1 to fill it */
+                width: 100%; /* Ensure it spans the full width */
+                margin: 0; /* Remove any default margins */
+                padding: 0; /* Remove any default paddings */
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8); /* Optional: A subtle shadow for the sticky bar */
+                /* If you want the h1 to start immediately at the top of the viewport,
+                ensure no margin/padding on body or preceding elements pushes it down. */
+            }
+
+            .about-header h1 {
+                background-color: #2D2A29; /* Black background */
+                color: #EEE5D8;
+                font-family: 'Black Mango', sans-serif; /* Added fallback font */
+                min-height: 15vh; /* Minimum height of the black section */
+
+                /* --- ADD/MODIFY THESE PROPERTIES --- */
+                width: 100%; /* Ensure the h1 takes full width */
+                margin: 0; /* Remove default margin from h1 */
+                padding: 0; /* Remove default padding from h1 */
+                display: flex; /* Use flexbox to center the text */
+                justify-content: center; /* Horizontally center the text */
+                align-items: center; /* Vertically center the text */
+                text-align: center; /* Fallback for older browsers, good practice */
+
+                /* Optional: Adjust font size for responsiveness */
+                font-size: clamp(2em, 6vw, 4em); /* Responsive font size */
+
+                /* To place it exactly at the top, ensure no other elements above it have margin/padding
+                that push it down, or use a negative margin if necessary (less common).
+                It will naturally sit at the top if it's the first element after the nav-full-width-wrapper. */
+            }
+
+
+
+
+
+            div.headeract3 {
+                background-color: black;
+                padding: 70px; /* This padding sets the height of the black background area */
+                margin: 0;
+                box-sizing: border-box;
+                
+                min-height: 320px; /* Ensure this div has a defined height */
+                
+                display: flex;
+                justify-content: center; /* Horizontally center content */
+                align-items: center; /* Vertically center content */
+
+                position: relative; /* CRUCIAL: Makes this the positioning context for absolute children */
+                overflow: hidden; /* Clips image if it overflows due to object-fit: cover */
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.50);
+            }
+
+            .imgheader {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                
+                position: absolute; /* CRUCIAL: Position the image absolutely within its parent */
+                top: 0;
+                left: 0;
+                z-index: 1; /* Place image below the text */
+            }
+
+            /* --- ADD THIS NEW CSS RULE FOR THE OVERLAY TEXT --- */
+            .overlay-text-act3 {
+                position: absolute; /* Position relative to .headeract1 */
+                top: 50%; /* Start at the vertical center */
+                left: 50%; /* Start at the horizontal center */
+                transform: translate(-50%, -50%); /* CRUCIAL: Adjust to truly center the element */
+                
+                color: #EEE5D8; /* Text color */
+                text-align: center; /* Center the text within this div */
+                width: 80%; /* Control text width for responsiveness */
+                max-width: 600px; /* Max width for readability */
+                
+                z-index: 2; /* Place text above the image */
+            }
+
+            .overlay-text-act3 h1 {
+                font-family: 'Black Mango'; /* Default serif font, similar to your image */
+                font-size: clamp(3em, 4vw, 5em); /* Responsive font size */
+                margin: 0; /* Remove default h1 margins */
+                padding: 0;
+                font-weight: normal; /* Adjust font weight to match image */
+            }
+
+            .overlay-text-act3 h3 {
+                font-family: 'Black Mango'; /* Default serif font, similar to your image */
+                font-size: clamp(1.5em, 2.4vw, 3em); /* Responsive font size */
+                margin: 0; /* Remove default h1 margins */
+                padding: 0;
+                font-weight: normal; /* Adjust font weight to match image */
+            }
+
+
+            .overlay-text-act3 a {
+                color: #EEE5D8;
+                background-color: #2d2a29;
+                border: 1px solid #2d2a29;
+                border-radius: 30px;
+                padding: 10px;
+                text-decoration: none;
+                font-size: 12px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+   
+            }
+
+
+            .overlay-text-act3 p.actdesc {
+                font-family: 'Black Mango'; /* Default serif font, similar to your image */
+                font-size: clamp(1.5em, 2.4vw, 3em); /* Responsive font size */
+                margin: 0; /* Remove default h1 margins */
+                padding: 0;
+                font-weight: normal; /* Adjust font weight to match image */
+            }
+
+
+             .overlay-text-act3 a:hover {
+                background-color: #EEE5D8;
+                border: 1px solid #EEE5D8;
+                color: #2d2a29;
+             }
+
+            
+
+             /*------------------------------------*/
+
+
+
+            h1 {
+                text-align: center;
+                font-weight:bolder;
+                font-family: 'Black Mango';
+            }
+
+
+            .resume-container h3 {
+                background-color: #2d2a29;
+                padding: 10px;
+                color: white;
+                border: 1px solid #2d2a29;
+                border-radius: 5px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+
+
+
+/*--------------------------------------------------------------*/
+        body {
+            background-color: rgb(255, 255, 255);
+            background-size: cover;
+            margin: 0; /* Ensures no space around the page */
+            padding: 0; /* Ensures no space around the page */
+            /* ... other body styles ... */
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+
+
+
+        /*--------------------------------------------*/
+
+        /* --- Cakepage (Container for the title and image) --- */
+        .Cakepage {
+            text-align: center; /* Centers inline-block elements (like the h1 text) */
+            margin-top: 25px;
+            margin-bottom: 50px; /* Add some space below the section */
+
+            /* Optional: Limit the overall width of the Cakepage section and center it */
+            max-width: 1200px; /* Adjust as needed for your page layout */
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 20px; /* Add some horizontal padding to the container */
+            box-sizing: border-box; /* Ensures padding is included in total width */
+        }
+
+        /* --- Cake Selection Menu Title --- */
+        .Cakepage h1 {
+            font-size: clamp(2em, 3vw, 2em); /* Responsive font size for the title */
+            color: #2D2A29; /* Example text color */
+            margin-bottom: 30px; /* Space between title and image */
+        }
+
+        /* --- img.main-cake (The main cake image) --- */
+        img.main-cake {
+            display: block; /* Make it a block-level element to use margin: auto for centering */
+            border-radius: 50px; /* Keeps your existing border-radius */
+
+            /* --- KEY PROPERTIES FOR RESIZABILITY AND CENTERING --- */
+            width: 90%; /* Make the image take 90% of its parent's width */
+                        /* This makes it responsive and smaller than full screen on larger displays */
+            max-width: 800px; /* Set a maximum size for the image to prevent it from getting too large */
+                            /* Adjust this value (e.g., 600px, 1000px) based on the image's optimal display size and design */
+            height: auto; /* CRUCIAL: Maintains the image's aspect ratio when resizing */
+            
+            margin-left: auto; /* Centers the image horizontally when it's a block element */
+            margin-right: auto; /* Centers the image horizontally when it's a block element */
+            /* margin-top will naturally follow the h1's margin-bottom if you keep it. */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
+        }
+
+        /* --- Responsive Adjustments (Optional, fine-tune for smaller screens) --- */
+        @media (max-width: 768px) {
+            .Cakepage h1 {
+                font-size: clamp(1.8em, 6vw, 2.5em);
+                margin-bottom: 20px;
+            }
+            img.main-cake {
+                width: 95%; /* Make it slightly larger on tablets */
+                border-radius: 30px; /* Adjust border-radius */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .Cakepage h1 {
+                font-size: clamp(1.5em, 8vw, 2em);
+                margin-bottom: 15px;
+            }
+            img.main-cake {
+                width: 98%; /* Take almost full width on mobile */
+                border-radius: 20px; /* Adjust border-radius */
+            }
+        }
+
+
+
+        /* --- coffee-container (The main wrapper for the title, image, and back link) --- */
+        .holidaycoffee-container {
+            max-width: 900px; /* Limit the max width of the entire content block */
+            margin: 0 auto; /* Center the whole container horizontally */
+            padding: 20px; /* Add some internal padding */
+            box-sizing: border-box; /* Ensures padding is included in the width */
+            text-align: center; /* Center h1 and .coffee div */
+        }
+
+        /* --- h1 (Title of the page) --- */
+        .holidaycoffee-container h1 {
+            font-size: clamp(2em, 3vw, 2em); /* Responsive font size */
+            text-align: center; /* Center the title text */
+            margin-top: 10px; /* Space above the title */
+            margin-bottom: 30px; /* Space below the title */
+            color: #2D2A29; /* Example text color */
+            font-family: 'Black Mango';
+        }
+
+
+        /* --- coffee (Container specifically for the image) --- */
+        .holiday {
+            text-align: center; /* This centers inline/inline-block children like the image,
+                                but we'll make the image 'display: block' and use margin:auto */
+            margin-top: 10px;
+            margin-bottom: 50px; /* Add some space below the image */
+        }
+
+        /* --- img (The image itself, targeted specifically for this section) --- */
+        .holiday img { /* Targeting img specifically within the .coffee div */
+            display: block; /* CRUCIAL: Makes the image a block-level element so margin: auto works */
+            border-radius: 50px; /* Keep existing border-radius */
+
+            /* --- KEY PROPERTIES FOR RESIZABILITY AND CENTERING --- */
+            width: 90%; /* Make the image take 90% of its parent's width */
+            max-width: 600px; /* Set a maximum size for the image (adjust as needed) */
+                            /* This prevents it from becoming too large on wide screens */
+            height: auto; /* CRUCIAL: Maintains the image's aspect ratio when resizing */
+            
+            margin-left: auto; /* Centers the image horizontally when it's a block element */
+            margin-right: auto; /* Centers the image horizontally when it's a block element */
+            
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
+        }
+
+
+
+
+
+        /* --- apple-container (The main wrapper for the title, image, and back link) --- */
+        .apple-container {
+            max-width: 900px; /* Limit the max width of the entire content block */
+            margin: 0 auto; /* Center the whole container horizontally */
+            padding: 20px; /* Add some internal padding */
+            box-sizing: border-box; /* Ensures padding is included in the width */
+            text-align: center; /* Center h1 and .apple div */
+        }
+
+        /* --- h1 (Title of the page) --- */
+        .apple-container h1 {
+            font-size: clamp(2em, 3vw, 2em); /* Responsive font size */
+            text-align: center; /* Center the title text */
+            margin-top: 10px; /* Space above the title */
+            margin-bottom: 30px; /* Space below the title */
+            color: #2D2A29; /* Example text color */
+            font-family: 'Black Mango';
+        }
+
+
+        /* --- apple (Container specifically for the image) --- */
+        .apple {
+            text-align: center; /* This centers inline/inline-block children like the image,
+                                but we'll make the image 'display: block' and use margin:auto */
+            margin-top: 10px;
+            margin-bottom: 50px; /* Add some space below the image */
+        }
+
+        /* --- img (The image itself, targeted specifically for this section) --- */
+        .apple img { /* Targeting img specifically within the .apple div */
+            display: block; /* CRUCIAL: Makes the image a block-level element so margin: auto works */
+            border-radius: 50px; /* Keep existing border-radius */
+
+            /* --- KEY PROPERTIES FOR RESIZABILITY AND CENTERING --- */
+            width: 90%; /* Make the image take 90% of its parent's width */
+            max-width: 600px; /* Set a maximum size for the image (adjust as needed) */
+                            /* This prevents it from becoming too large on wide screens */
+            height: auto; /* CRUCIAL: Maintains the image's aspect ratio when resizing */
+            
+            margin-left: auto; /* Centers the image horizontally when it's a block element */
+            margin-right: auto; /* Centers the image horizontally when it's a block element */
+            
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
+        }
+
+
+        /* --- coffee-container (The main wrapper for the title, image, and back link) --- */
+        .coffee-container {
+            max-width: 900px; /* Limit the max width of the entire content block */
+            margin: 0 auto; /* Center the whole container horizontally */
+            padding: 20px; /* Add some internal padding */
+            box-sizing: border-box; /* Ensures padding is included in the width */
+            text-align: center; /* Center h1 and .coffee div */
+        }
+
+        /* --- h1 (Title of the page) --- */
+        .coffee-container h1 {
+            font-size: clamp(2em, 3vw, 2em); /* Responsive font size */
+            text-align: center; /* Center the title text */
+            margin-top: 10px; /* Space above the title */
+            margin-bottom: 30px; /* Space below the title */
+            color: #2D2A29; /* Example text color */
+            font-family: 'Black Mango';
+        }
+
+
+        /* --- coffee (Container specifically for the image) --- */
+        .coffee {
+            text-align: center; /* This centers inline/inline-block children like the image,
+                                but we'll make the image 'display: block' and use margin:auto */
+            margin-top: 10px;
+            margin-bottom: 50px; /* Add some space below the image */
+        }
+
+        /* --- img (The image itself, targeted specifically for this section) --- */
+        .coffee img { /* Targeting img specifically within the .coffee div */
+            display: block; /* CRUCIAL: Makes the image a block-level element so margin: auto works */
+            border-radius: 50px; /* Keep existing border-radius */
+
+            /* --- KEY PROPERTIES FOR RESIZABILITY AND CENTERING --- */
+            width: 90%; /* Make the image take 90% of its parent's width */
+            max-width: 300px; /* Set a maximum size for the image (adjust as needed) */
+                            /* This prevents it from becoming too large on wide screens */
+            height: auto; /* CRUCIAL: Maintains the image's aspect ratio when resizing */
+            
+            margin-left: auto; /* Centers the image horizontally when it's a block element */
+            margin-right: auto; /* Centers the image horizontally when it's a block element */
+            
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
+        }
+
+
+
+        /* --- coffee-container (The main wrapper for the title, image, and back link) --- */
+        .triple-container {
+            max-width: 900px; /* Limit the max width of the entire content block */
+            margin: 0 auto; /* Center the whole container horizontally */
+            padding: 20px; /* Add some internal padding */
+            box-sizing: border-box; /* Ensures padding is included in the width */
+            text-align: center; /* Center h1 and .coffee div */
+        }
+
+        /* --- h1 (Title of the page) --- */
+        .triple-container h1 {
+            font-size: clamp(2em, 3vw, 2em); /* Responsive font size */
+            text-align: center; /* Center the title text */
+            margin-top: 10px; /* Space above the title */
+            margin-bottom: 30px; /* Space below the title */
+            color: #2D2A29; /* Example text color */
+            font-family: 'Black Mango';
+        }
+
+
+        /* --- coffee (Container specifically for the image) --- */
+        .triple {
+            text-align: center; /* This centers inline/inline-block children like the image,
+                                but we'll make the image 'display: block' and use margin:auto */
+            margin-top: 10px;
+            margin-bottom: 50px; /* Add some space below the image */
+        }
+
+        /* --- img (The image itself, targeted specifically for this section) --- */
+        .triple img { /* Targeting img specifically within the .coffee div */
+            display: block; /* CRUCIAL: Makes the image a block-level element so margin: auto works */
+            border-radius: 50px; /* Keep existing border-radius */
+
+            /* --- KEY PROPERTIES FOR RESIZABILITY AND CENTERING --- */
+            width: 90%; /* Make the image take 90% of its parent's width */
+            max-width: 500px; /* Set a maximum size for the image (adjust as needed) */
+                            /* This prevents it from becoming too large on wide screens */
+            height: auto; /* CRUCIAL: Maintains the image's aspect ratio when resizing */
+            
+            margin-left: auto; /* Centers the image horizontally when it's a block element */
+            margin-right: auto; /* Centers the image horizontally when it's a block element */
+            
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
+        }
+        /*------------------------------*/
+
+
+
+
+
+
+
+        /* --- back (Container for the "Main Menu" link) --- */
+        .back {
+            text-align: center; /* Center the link text */
+            margin-bottom: 50px; /* Space below the link */
+        }
+
+        .back a {
+            color: rgb(255, 255, 255); /* Red text color */
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none; /* Remove underline */
+            font-weight: bold; /* Make it bold */
+            font-size: 1.1em; /* Adjust font size */
+            font-family: 'Black Mango';
+            background-color: rgb(193, 7, 7);
+            border: 1px solid rgb(193, 7, 7);
+            border-radius: 30px;
+            padding: 10px 30px;
+    
+            transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition for hover */
+        }
+
+        .back a:hover {
+            background-color: #2D2A29;
+            border: 1px solid #2D2A29;
+        }
+
+        a {
+            text-align: center;  /* This might not work as expected for all 'a' tags */
+        }
+
+
+
+/*--------------------------------------------------------------------*/
+
+
+
+            div.footeract {
+                background-color: black;
+                padding: 70px; /* This padding sets the height of the black background area */
+                margin: 0;
+                box-sizing: border-box;
+                
+                min-height: 320px; /* Ensure this div has a defined height */
+                
+                display: flex;
+                justify-content: center; /* Horizontally center content */
+                align-items: center; /* Vertically center content */
+
+                position: relative; /* CRUCIAL: Makes this the positioning context for absolute children */
+                overflow: hidden; /* Clips image if it overflows due to object-fit: cover */
+                box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.3);
+            }
+
+            .imgfooter {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                
+                position: absolute; /* CRUCIAL: Position the image absolutely within its parent */
+                top: 0;
+                left: 0;
+                z-index: 1; /* Place image below the text */
+            }
+
+            /* --- ADD THIS NEW CSS RULE FOR THE OVERLAY TEXT --- */
+            .overlay-text-act {
+                position: absolute; /* Position relative to .headeract1 */
+                top: 50%; /* Start at the vertical center */
+                left: 50%; /* Start at the horizontal center */
+                transform: translate(-50%, -50%); /* CRUCIAL: Adjust to truly center the element */
+                
+                color: #EEE5D8; /* Text color */
+                text-align: center; /* Center the text within this div */
+                width: 80%; /* Control text width for responsiveness */
+                max-width: 600px; /* Max width for readability */
+                
+                z-index: 2; /* Place text above the image */
+            }
+
+
+            .overlay-text-act p.actdesc {
+                font-family: 'Black Mango'; /* Default serif font, similar to your image */
+                font-size: clamp(3em, 5vw, 4em); /* Responsive font size */
+                margin: 0; /* Remove default h1 margins */
+                padding: 0;
+                font-weight: normal; /* Adjust font weight to match image */
+            }
+
+
+
+
+            /* --- projects-footer (The main dark background container) --- */
+            .projects-footer {
+                background-color: #2D2A29; /* Dark background as seen in the image */
+                color: #EEE5D8; /* Light text color for all content inside footer */
+                
+                width: 100%; /* Ensures it spans the full width of the viewport */
+                margin: 0; /* Remove any default outer margins */
+                box-sizing: border-box; /* Include padding in the element's total width */
+
+                /* These paddings create the internal space around the text content */
+                padding: 70px 20px; /* Adjust top/bottom (40px) and left/right (20px) as needed */
+                
+                /* Use flexbox to stack and center the content (both paragraphs) */
+                display: flex;
+                flex-direction: column; /* Stacks the paragraphs vertically */
+                justify-content: center; /* Horizontally centers the flex items (paragraphs) */
+                align-items: center; /* Horizontally centers the flex items within the container */
+
+                /* Add the shadow below the footer as seen in the image */
+                box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.50); /* Darker, more pronounced shadow */
+            }
+
+            /* --- actdesc (The "Activity 1 - Eye of the Tiger" text) --- */
+            .projects-footer .actdesc {
+                font-family: 'Black Mango', sans-serif; /* Using Black Mango as it appears in the image */
+                font-size: clamp(1.2em, 2.5vw, 1.8em); /* Responsive font size */
+                font-weight: normal; /* As it appears to be in the image */
+                text-align: center; /* Ensure text is centered */
+                margin: 0; /* Remove default paragraph margins */
+                margin-bottom: 1em; /* Space below this title paragraph */
+                max-width: 900px; /* Limit width for readability */
+            }
+
+            /* --- description-text (The main descriptive paragraph) --- */
+            .projects-footer .description-text {
+                font-family: Arial, Helvetica, sans-serif; /* Keep Arial as requested for body text */
+                font-size: clamp(0.9em, 1vw, 0.8em); /* Responsive font size */
+                line-height: 1.5; /* Good line height for readability */
+                text-align: center; /* Ensure text is centered */
+                margin: 0; /* Remove default paragraph margins */
+                max-width: 700px; /* Limit width for readability, same as the title */
+                /* Add a subtle shadow to the text itself if needed, though usually not done */
+                /* text-shadow: 0 1px 2px rgba(0,0,0,0.5); */ 
+            }
+
+
+            /* --- Responsive Adjustments --- */
+            @media (max-width: 768px) {
+                .projects-footer {
+                    padding: 30px 15px; /* Adjust padding for tablets */
+                }
+                .projects-footer .actdesc {
+                    font-size: clamp(1em, 3vw, 1.5em);
+                }
+                .projects-footer .description-text {
+                    font-size: clamp(0.85em, 2vw, 1em);
+                    max-width: 95%; /* Allow more width on smaller screens */
+                }
+            }
+
+            @media (max-width: 480px) {
+                .projects-footer {
+                    padding: 25px 10px; /* Adjust padding for mobile */
+                }
+                .projects-footer .actdesc {
+                    font-size: clamp(0.9em, 4vw, 1.2em);
+                }
+                .projects-footer .description-text {
+                    font-size: clamp(0.8em, 2.5vw, 0.9em);
+                    max-width: 98%; /* Take almost full width on very small screens */
+                }
+            }

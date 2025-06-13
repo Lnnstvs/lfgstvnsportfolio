@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x - icon"  href="Media_Portfolio/favicon-32x32.png">
+    <link rel="stylesheet" href="act4.css">
+    <title>Map Area (Cakes)</title>
+
+
+    
+    <style>
+
+            
+    </style>
+
+
+</head>
+
+
+<body>
+
+        <div class="headeract3">
+            <img class="imgheader" src="Media_Portfolio/portfolio_bg1.2.png" alt="Media Background">
+        
+            <!-- ADD THIS TEXT DIV -->
+            <div class="overlay-text-act3">
+                <h1>Map Area (Cakes)</h1>
+                <h3>- ✦ -</h3>
+                <br>
+                <a href="index.html">Back to Main Page</a>
+            </div>
+        </div>
+
+        <div class="about-header" id="SEC2">
+            <h1></h1>
+        </div>
+
+        <br> <br>
+
+
+<div class="Cakepage"> <!--Cake div-->
+    <h1>.• Cake Selection Menu •.</h1>
+
+    <!-- Add id="mainCakeImage" to your img tag -->
+    <img class="main-cake" id="mainCakeImage" src="Media_Portfolio/MainCake.jpg" usemap="#cakemain" alt="Cake Selection">
+
+    <!-- Add id="cakemain" to your map tag -->
+    <map name="cakemain" id="cakemain">
+        <!-- For each area, copy the 'coords' value into a new 'data-original-coords' attribute -->
+        <area target="_self" alt="Holiday" title="Holiday" href="HolidayCoffeeCake.html" 
+              coords="208,194,218,325,273,351,335,363,463,363,542,335,566,315,569,197,564,180,484,156,389,145,307,152,254,162" shape="poly"
+              data-original-coords="208,194,218,325,273,351,335,363,463,363,542,335,566,315,569,197,564,180,484,156,389,145,307,152,254,162">
+
+        <area target="_self" alt="AppleCrumble" title="AppleCrumble" href="AppleBerryCrumbleCheesecake.html" 
+              coords="382,502,395,615,440,642,538,666,610,670,673,663,752,646,788,620,801,603,815,499,803,473,721,447,639,433,553,432,467,442,413,463" shape="poly"
+              data-original-coords="382,502,395,615,440,642,538,666,610,670,673,663,752,646,788,620,801,603,815,499,803,473,721,447,639,433,553,432,467,442,413,463">
+
+        <area target="_self" alt="TripleChoco" title="TripleChoco" href="TripleChocolateCake.html" 
+              coords="722,281,729,341,729,392,746,413,788,433,818,439,865,447,899,452,964,447,1008,440,1044,425,1063,409,1068,394,1073,356,1075,320,1075,284,1051,260,1000,243,935,233,866,228,800,238,750,255" shape="poly"
+              data-original-coords="722,281,729,341,729,392,746,413,788,433,818,439,865,447,899,452,964,447,1008,440,1044,425,1063,409,1068,394,1073,356,1075,320,1075,284,1051,260,1000,243,935,233,866,228,800,238,750,255">
+
+        <area target="_self" alt="Coffee" title="Coffee" href="Coffee.html" 
+              coords="1000,457,998,488,1000,521,1005,548,1008,574,1015,605,1036,610,1058,612,1089,603,1096,581,1101,564,1120,550,1135,534,1140,516,1132,493,1116,476,1115,461,1082,447,1053,442,1026,445" shape="poly"
+              data-original-coords="1000,457,998,488,1000,521,1005,548,1008,574,1015,605,1036,610,1058,612,1089,603,1096,581,1101,564,1120,550,1135,534,1140,516,1132,493,1116,476,1115,461,1082,447,1053,442,1026,445">
+    </map>
+
+</div> <!--Cake div-->
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const image = document.getElementById('mainCakeImage');
+        const map = document.getElementById('cakemain');
+
+        // Function to resize map areas
+        function resizeImageMap() {
+            // Ensure image and map elements exist
+            if (!image || !map) {
+                console.error("Image or map element not found. Cannot resize image map.");
+                return;
+            }
+
+            // Wait for the image to load to get its natural (original) dimensions
+            // If naturalWidth is 0, image hasn't loaded yet, try again later
+            if (image.naturalWidth === 0) {
+                image.onload = resizeImageMap; // Re-run when image loads
+                return;
+            }
+
+            // Get the original dimensions of the image file
+            const originalWidth = image.naturalWidth;
+            const originalHeight = image.naturalHeight;
+
+            // Get the current rendered dimensions of the image on the page (after CSS scaling)
+            const currentWidth = image.offsetWidth;
+            const currentHeight = image.offsetHeight;
+
+            // Calculate scaling factors for both X and Y axes
+            const scaleX = currentWidth / originalWidth;
+            const scaleY = currentHeight / originalHeight;
+
+            // Get all area elements within the map
+            const areas = map.getElementsByTagName('area');
+
+            // Iterate through each area and update its coordinates
+            for (let i = 0; i < areas.length; i++) {
+                const area = areas[i];
+                // Retrieve original coords from the data-original-coords attribute
+                const originalCoords = area.dataset.originalCoords;
+
+                if (originalCoords) {
+                    // Split the string into an array of numbers
+                    const coordsArray = originalCoords.split(',').map(Number);
+                    const newCoordsArray = [];
+
+                    // Scale each coordinate
+                    for (let j = 0; j < coordsArray.length; j++) {
+                        if (j % 2 === 0) { // X coordinate (0, 2, 4, ...)
+                            newCoordsArray.push(Math.round(coordsArray[j] * scaleX));
+                        } else { // Y coordinate (1, 3, 5, ...)
+                            newCoordsArray.push(Math.round(coordsArray[j] * scaleY));
+                        }
+                    }
+                    // Update the coords attribute with the new scaled values
+                    area.coords = newCoordsArray.join(',');
+                }
+            }
+        }
+
+        // --- Call resize function on important events ---
+        // 1. Initial page load (after image is potentially loaded)
+        window.addEventListener('load', resizeImageMap);
+
+        // 2. Window resize (when the user changes browser window size or device orientation)
+        window.addEventListener('resize', resizeImageMap);
+
+        // 3. If the image source is dynamically loaded or changed
+        image.addEventListener('load', resizeImageMap);
+    });
+</script>
+
+
+<br> <br> <br>
+
+
+<!--------------------------FOOTER---------------------------->
+
+    <div class="projects-footer">
+            <p class="actdesc">Map Area (Cakes)</p>
+            <p class="description-text">In this activity, I applied image maps using (map) and (area) tags to make some areas 
+                of the picture clickable. Those clickable areas will navigate to a new page. Try clicking the cakes.</p>
+        </div>
+
+
+    <div class="footeract">
+            <img class="imgfooter" src="Media_Portfolio/portfolio_bg1.3.png" alt="Media Background">
+        
+            <!-- ADD THIS TEXT DIV -->
+            <div class="overlay-text-act">
+                <p class="actdesc">- ✦ -</p>
+
+                <br>
+            </div>
+        </div>
+
+
+<!--------------------------FOOTER---------------------------->
+
+
+
+</body>
+
+
+</html>
