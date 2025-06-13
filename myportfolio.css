@@ -1,0 +1,1106 @@
+html {
+    scroll-behavior: smooth; /* This is the magic line! */
+}
+
+
+/* --- Glacial Indifference Fonts --- */
+@font-face {
+    font-family: 'Glacial Indifference Regular'; /* Name you'll use in your CSS */
+    src: url('./Fonts_Portfolio/GlacialIndifference-Regular.otf') format('opentype');
+    font-weight: 400; /* Regular weight */
+    font-style: normal;
+    font-display: swap; /* Ensures text remains visible during font loading */
+}
+
+@font-face {
+    font-family: 'Glacial Indifference Bold';
+    src: url('./Fonts_Portfolio/GlacialIndifference-Bold.otf') format('opentype');
+    font-weight: 700; /* Bold weight */
+    font-style: normal;
+    font-display: swap;
+}
+
+/* --- Black Mango Font --- */
+@font-face {
+    font-family: 'Black Mango';
+    src: url('./Fonts_Portfolio/BlackMango-Black.ttf') format('truetype');
+    font-weight: 900; /* 'Black' usually implies a very heavy weight */
+    font-style: normal;
+    font-display: swap;
+}
+
+/* --- Sloop Script Regular Font --- */
+@font-face {
+    font-family: 'Sloop Script';
+    src: url('./Fonts_Portfolio/Sloop Script Regular.ttf') format('truetype');
+    font-weight: 'Regular'; /* 'Regular' implies normal weight */
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/*-----------------------------------------------------------------*/
+
+/*HEADER MAIN DIV START*/
+
+/* Base body styles */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            font-size: 16px;
+            line-height: 1.5;
+            min-height: 300vh;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Inter', sans-serif; /* Default font for the body */
+        }
+
+        /* Styles for the main header section */
+        .headermain {
+            /* No margin-bottom here, as it can create unwanted space */
+            padding: 0;
+            background-color: #2D2A29; /* Dark background color */
+            /* min-height adjusted to better fit common screen sizes, can be changed */
+            min-height: 100vh; /* Adjust based on desired height of the header section */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content horizontally */
+            justify-content: center; /* Center content vertically (if using flexbox for text positioning) */
+            overflow: hidden; /* Hide any content that overflows the container */
+
+            /* Add this line for bottom shadow */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); 
+
+
+            /* border: 5px solid #2D2A29; /* Border color */
+            border-bottom-left-radius: 0%; /* Rounded bottom-left corner */
+            border-bottom-right-radius: 0%; /* Rounded bottom-right corner */
+
+            /* Crucial for positioning the overlay-text relative to this container */
+            position: relative; /* Establishes a positioning context for absolutely positioned children */
+        }
+
+        /* Styles for the background image */
+        .graphicsmain {
+            width: 100%; /* Make the image fill the width of its container */
+            height: 100%; /* Make the image fill the height of its container */
+            max-height: 100%; /* Ensure the image doesn't exceed the container's height */
+            object-fit: cover; /* Scale the image to cover the entire container, cropping if necessary */
+            display: block; /* Remove extra space below the image (common for img tags) */
+            position: absolute; /* Position the image absolutely within its relative parent */
+            top: 0;
+            left: 0;
+            z-index: 1; /* Place the image below the overlay text */
+        }
+
+        /* Styles for the text overlay container */
+        .overlay-text {
+            position: absolute; /* Position it relative to .headermain */
+            top: 40%; /* Start at the vertical center of the parent */
+            left: 50%; /* Start at the horizontal center of the parent */
+            transform: translate(-50%, -50%); /* Adjust to truly center the element based on its own size */
+            color: #EEE5D8; /* White text color */
+            text-align: center; /* Center the text within this div */
+            width: 90%; /* Adjust width as needed for responsiveness */
+            max-width: 900px; /* Optional: Set a max width for readability on very large screens */
+            z-index: 2; /* Ensure the text is above the image */
+            padding: 1rem; /* Add some padding around the text */
+            box-sizing: border-box; /* Include padding in the width calculation */
+        }
+
+        /* Styles for the "Welcome to my" text */
+        .overlay-text .welcome {
+            font-family: 'Sloop Script'; /* A script-like font for a welcoming feel */
+            font-size: clamp(4rem, 6.2vw, 5.7rem); /* Responsive font size */
+            margin-bottom: 0.2em; /* Space between welcome and Portfolio */
+            font-weight: 400;
+        }
+
+        /* Styles for the "Portfolio" heading */
+        .overlay-text h1 {
+            font-family: 'Black Mango'; /* A classic serif font for "Portfolio" */
+            font-size: clamp(3.5rem, 10vw, 8rem); /* Responsive font size */
+            margin-top: 0;
+            margin-bottom: 0.3em;
+            line-height: 1; /* Adjust line height if necessary */
+            font-weight: 700;
+        }
+
+        /* Styles for the "Bringing innovative ideas..." phrase */
+        .overlay-text .phrase {
+            font-family: 'Glacial Indifference Regular'; /* A clean sans-serif font for the phrase */
+            font-size: clamp(0.9rem, 2.5vw, 1.4rem); /* Responsive font size */
+            line-height: 1.4;
+            max-width: 70%; /* Limit width for better readability */
+            margin-left: auto; /* Center the phrase */
+            margin-right: auto; /* Center the phrase */
+            font-weight: 300;
+        }
+
+        /* Styles for the horizontal lines and star */
+        .headdivider {
+            display: flex; /* Use flexbox for alignment */
+            align-items: center; /* Vertically align items in the center */
+            justify-content: center; /* Horizontally align items in the center */
+            width: 60%; /* Adjust width of the divider section */
+            margin: 1.5em auto; /* Center the divider and add vertical space */
+        }
+
+        .headdivider .line {
+            flex-grow: 1; /* Make the lines grow to fill available space */
+            border: none; /* Remove default border */
+            border: 5px solid #fff6e4; /* White horizontal line */
+            border-radius: 30px;
+            margin: 0 1em; /* Space between line and star */
+            /* opacity: 0.7; /* Slightly transparent */
+        }
+
+        .headdivider .star {
+            font-size: clamp(1.5rem, 4.8vw, 3rem); /* Responsive star size */
+            color: #fff6e4; /* White star color */
+            margin: 0 0.5em; /* Space around the star */
+            line-height: 1; /* Ensure star is vertically centered with lines */
+        }
+
+        /* Media queries for better responsiveness on smaller screens */
+        @media (max-width: 768px) {
+            .headermain {
+                min-height: 60vh; /* Adjust height for smaller screens */
+                border-bottom-left-radius: 0%;
+                border-bottom-right-radius: 0%;
+            }
+
+            .overlay-text .welcome {
+                font-size: clamp(1.5rem, 5vw, 2.5rem);
+            }
+
+            .overlay-text h1 {
+                font-size: clamp(3rem, 12vw, 6rem);
+            }
+
+            .overlay-text .phrase {
+                font-size: clamp(0.8rem, 3vw, 1.2rem);
+                max-width: 90%;
+            }
+
+            .headdivider {
+                width: 80%;
+                margin: 1em auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .headermain {
+                min-height: 50vh;
+                border-bottom-left-radius: 0%;
+                border-bottom-right-radius: 0%;
+            }
+
+            .overlay-text .welcome {
+                font-size: clamp(1.2rem, 6vw, 2rem);
+            }
+
+            .overlay-text h1 {
+                font-size: clamp(2.5rem, 15vw, 5rem);
+            }
+
+            .overlay-text .phrase {
+                font-size: clamp(0.7rem, 4vw, 1rem);
+                max-width: 95%;
+            }
+
+            .headdivider {
+                width: 90%;
+                margin: 0.8em auto;
+            }
+        }
+
+
+/*HEADER MAIN DIV END*/
+
+/*---------------------------------------------------------------------*/
+
+
+
+
+
+
+
+/*---------------------------------------------------------------------*/
+
+/*Bookmark DIV START*/
+
+
+
+/* --- Sections Container (The outer light grey rounded bar) --- */
+.sections-container {
+    /* REMOVE these margins. Their purpose is now handled by padding on .nav-full-width-wrapper */
+    /* margin-top: 40px; */
+    /* margin-bottom: 40px; */
+    
+    margin-left: auto; /* Keep these auto margins to center it horizontally within the wrapper */
+    margin-right: auto;
+    
+    background-color: #23201F;
+    border: 1px solid #23201F;
+    border-radius: 30px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 5px; /* This padding is specific to the grey bar itself */
+    box-sizing: border-box;
+    
+    width: 90%;
+    max-width: 1200px;
+    
+    /* REMOVE THESE LINES as stickiness is now handled by the .nav-full-width-wrapper */
+    /* position: sticky; */
+    /* top: 10px; */
+    /* z-index: 1000; */
+    /* background-color: #ededed; */ /* Keep this as it's the grey bar's own background */
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */ /* Move this to .nav-full-width-wrapper if desired for sticky state */
+}
+
+
+
+/* --- Bookmark Container (Inner wrapper, often useful for fine-tuning) --- */
+.bookmark-container {
+    display: flex;
+    justify-content: center; /* Center the ul inside */
+    width: 100%; /* Ensure it takes full width of its parent sections-container's content area */
+}
+
+/* --- List (ul) of bookmarks --- */
+.bookmark-container ul {
+    list-style-type: none; /* Remove default bullets */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    
+    display: flex; /* Make the ul a flex container for its list items */
+    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+    justify-content: center; /* Center items horizontally, even when they wrap */
+    gap: 20px; /* Spacing between the individual buttons */
+}
+
+/* --- Individual Bookmark Links (The white pill-shaped buttons) --- */
+.bookmark {
+    display: block; /* Make the link a block-level element to apply padding */
+    text-decoration: none; /* Remove underline */
+    
+    /* Use responsive padding (em units scale with font size) */
+    padding: 0.5em 0.9em; /* Adjust vertical and horizontal padding */
+
+    color: #EEE5D8;
+    font-family: 'Glacial Indifference Bold'; /* Use your font, with a fallback */
+    font-size: 1em; /* Use em unit for responsive font size */
+    font-weight: bolder;
+    background-color: #2D2A29;
+    border: 1px solid #2D2A29; /* Keep the white border for consistency */
+    border-radius: 40px; /* Pill shape */
+    
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    white-space: nowrap; /* Prevent text from wrapping inside the button */
+    text-align: center; /* Center text within the button */
+    min-width: 100px; /* Ensure a minimum width for buttons on larger screens */
+}
+
+/* --- Hover and Active States for Bookmarks --- */
+.bookmark:hover,
+.bookmark.active { /* The 'active' class will show the selected button */
+    background-color: #EEE5D8; /* Dark background on hover/active */
+    border: 1px solid #EEE5D8;
+    color: #23201F; /* White text on hover/active */
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+
+/* --- Media Queries for Responsiveness --- */
+
+/* For screens smaller than 768px (e.g., tablets) */
+@media (max-width: 768px) {
+    .sections-container {
+        width: 95%; /* Make container slightly wider to use more space */
+        padding: 8px; /* Slightly less padding */
+        border-radius: 25px; /* Slightly smaller border-radius */
+    }
+
+    .bookmark-container ul {
+        gap: 10px; /* Reduce gap between buttons */
+    }
+
+    .bookmark {
+        padding: 0.7em 2em; /* Adjust padding */
+        font-size: 1em; /* Slightly smaller font size */
+        min-width: unset; /* Allow buttons to shrink more if needed */
+        flex-grow: 1; /* Allow buttons to grow and fill space on smaller screens */
+    }
+}
+
+/* For screens smaller than 480px (e.g., mobile phones) */
+@media (max-width: 480px) {
+    .sections-container {
+        width: 98%; /* Even wider */
+        padding: 6px; /* Even less padding */
+        border-radius: 20px; /* Even smaller border-radius */
+    }
+
+    .bookmark-container ul {
+        /* On very small screens, you might want buttons to stack vertically */
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 8px; /* Gap between stacked buttons */
+    }
+
+    .bookmark {
+        padding: 0.6em 1.5em; /* Smallest padding */
+        font-size: 0.9em; /* Smallest font size */
+        width: 100%; /* Make stacked buttons fill the width */
+        box-sizing: border-box; /* Crucial for full width with padding */
+    }
+}
+
+
+
+
+
+.nav-full-width-wrapper {
+    background-color: #23201F; /* This creates the full-width white background */
+    width: 100%; /* Ensures it spans the entire width of the viewport */
+    
+    /* These properties make the entire white strip sticky */
+    position: sticky;
+    top: 0; /* Sticks to the very top edge of the viewport */
+    z-index: 1000; /* Ensures it stays on top of other content */
+    
+    /* These paddings create the vertical space around the gray nav bar within the white strip */
+    padding-top: 5px; /* Corresponds to the original margin-top of .sections-container */
+    padding-bottom: 5px; /* Corresponds to the original margin-bottom of .sections-container */
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8); /* Optional: A subtle shadow for the sticky bar */
+}
+
+/* Optional: Adjust padding for the wrapper on smaller screens */
+@media (max-width: 768px) {
+    .nav-full-width-wrapper {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-full-width-wrapper {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+
+
+
+/*Bookmark DIV END*/
+
+/*---------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+/*---------------------------------------------------------------------*/
+/*ABOUT DIV START*/
+
+/* --- Add this if .about-header doesn't exist or needs specific styling --- */
+.about-header {
+    /* If this is the direct container for h1 and you want h1 to fill it */
+    width: 100%; /* Ensure it spans the full width */
+    margin: 0; /* Remove any default margins */
+    padding: 0; /* Remove any default paddings */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8); /* Optional: A subtle shadow for the sticky bar */
+    /* If you want the h1 to start immediately at the top of the viewport,
+       ensure no margin/padding on body or preceding elements pushes it down. */
+}
+
+.about-header h1 {
+    background-color: #2D2A29; /* Black background */
+    color: #EEE5D8;
+    font-family: 'Black Mango', sans-serif; /* Added fallback font */
+    min-height: 50vh; /* Minimum height of the black section */
+
+    /* --- ADD/MODIFY THESE PROPERTIES --- */
+    width: 100%; /* Ensure the h1 takes full width */
+    margin: 0; /* Remove default margin from h1 */
+    padding: 0; /* Remove default padding from h1 */
+    display: flex; /* Use flexbox to center the text */
+    justify-content: center; /* Horizontally center the text */
+    align-items: center; /* Vertically center the text */
+    text-align: center; /* Fallback for older browsers, good practice */
+
+    /* Optional: Adjust font size for responsiveness */
+    font-size: clamp(2em, 6vw, 4em); /* Responsive font size */
+
+    /* To place it exactly at the top, ensure no other elements above it have margin/padding
+       that push it down, or use a negative margin if necessary (less common).
+       It will naturally sit at the top if it's the first element after the nav-full-width-wrapper. */
+}
+
+
+
+
+
+
+
+/* --- ABOUT CONTAINER (Main wrapper for the grid) --- */
+.about-container {
+    max-width: 1000px; /* Max width of the overall grid container */
+    margin: 50px auto; /* Center the container horizontally, add vertical spacing */
+    padding: 40px; /* Padding inside the container, around the grid */
+    background-color: #ffffff; /* White background for the whole grid area */
+    border-radius: 15px; /* Slightly rounded corners for the overall container */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+    box-sizing: border-box; /* Include padding in width calculation */
+
+    cursor: pointer; /* Indicate it's interactive */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+
+/*  Define the hover state */
+.about-container:hover {
+    transform: scale(1.025); /* Enlarge by 10% on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
+
+
+
+/* --- ABOUT CONTENT (The CSS Grid container for the four divs) --- */
+.about-content {
+    display: grid; /* Enables CSS Grid layout */
+    
+    /* Define 2 columns, each taking equal available space (1fr) */
+    grid-template-columns: 1fr 1fr; 
+    
+    /* Define 2 rows, with heights determined by their content (auto) */
+    grid-template-rows: auto auto; 
+    
+    gap: 20px; /* Space between grid items (the "divs") */
+}
+
+/* --- Styling for the individual grid items (the four divs) --- */
+.myinfo,
+.mypfp,
+.mycollege,
+.mycontact {
+    padding: 20px; /* Padding inside each grid item */
+    background-color: #ffffff; /* Explicitly white background for items */
+    border-radius: 8px; /* Slightly rounded corners for individual items */
+    /* No border or dashed lines as per your instruction */
+}
+
+/* --- Specific Styling for Content within Grid Items --- */
+
+/* 1: myinfo (Top Left) */
+.myinfo {
+    text-align: left;
+    color: #e06948;
+}
+.myinfo p { /* Hello! I'm */
+    font-size: 3em;
+    margin-bottom: 0.2em;
+    font-family: 'Glacial Indifference Bold';
+    font-weight: bolder;
+}
+.myinfo h1 { /* LEANNA FRANCINE G. STEVENSON */
+    font-size: 2.5em;
+    line-height: 1.1;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: bolder; /* Default bold */
+    color: #2D2A29; /* Ensure text color is dark */
+    font-family: 'Black Mango';
+}
+.myinfo h3 { /* 20 Y/O */
+    font-size: 1.8em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: bolder;
+    font-family: 'Glacial Indifference Bold';
+}
+
+/* 2: mypfp (Top Right) */
+.mypfp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center image vertically */
+    align-items: center; /* Center image horizontally */
+    text-align: center;
+}
+.mypfp img {
+    width: 250px; /* Adjust size as needed */
+    height: 250px;
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover; /* Ensure image covers the circle */
+    border: 5px solid #2D2A29; /* Simple border for placeholder */
+}
+
+
+
+
+.mycollege .pfpline, .mycontact .pfpline {
+            flex-grow: 5; /* Make the lines grow to fill available space */
+            border: none; /* Remove default border */
+            border: 4px solid #2D2A29; /*Black horizontal line */
+            border-radius: 30px;
+            margin: 0; 
+            /* opacity: 0.7; /* Slightly transparent */
+        }
+
+
+
+/* 3: mycollege (Bottom Left) */
+.mycollege {
+    text-align: left;
+    color: #2D2A29;
+}
+.mycollege h3 { /* Second Year Student */
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 0.2em;
+    font-weight: bolder;
+    font-family: 'Glacial Indifference Bold';
+}
+.mycollege p { /* BACHELOR OF SCIENCE... (BSIT-MWA) */
+    font-size: 1em;
+    line-height: 1.4;
+    margin-top: 0.2em;
+    margin-bottom: 0.5em;
+    font-family: 'Glacial Indifference Regular';
+}
+.mycollege h5 { /* National University, Clark */
+    font-size: 1.8em;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+    font-weight: bolder;
+    font-family: 'Glacial Indifference Bold';
+    color: #e0a148;
+    
+}
+
+/* 4: mycontact (Bottom Right) */
+.mycontact {
+    text-align: left;
+    color: #2D2A29;
+}
+.mycontact p {
+    font-size: 1em;
+    margin-bottom: 1em; /* Space between email and phone paragraphs */
+    line-height: 1.4;
+    font-family: 'Glacial Indifference Regular';
+}
+.mycontact p:last-child {
+    margin-bottom: 0; /* No bottom margin on the last paragraph */
+}
+
+
+/* --- Responsive Adjustments --- */
+
+/* For screens smaller than 768px (e.g., tablets) */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 15px;
+        width: 95%; /* Adjust container width */
+    }
+    .about-content {
+        grid-template-columns: 1fr; /* Stack columns into a single column */
+        grid-template-rows: auto; /* Rows will adjust automatically */
+        gap: 15px;
+    }
+
+    /* Adjust text alignment for stacked layout */
+    .myinfo,
+    .mycollege,
+    .mycontact {
+        text-align: center;
+    }
+}
+
+/* For screens smaller than 480px (e.g., mobile phones) */
+@media (max-width: 480px) {
+    .about-container {
+        padding: 10px;
+        width: 98%;
+    }
+    .about-content {
+        gap: 10px;
+    }
+
+    /* Further adjust font sizes for mobile */
+    .myinfo h1 {
+        font-size: 1.8em;
+    }
+    .myinfo h3 {
+        font-size: 1.1em;
+    }
+    .mycollege h3 {
+        font-size: 1em;
+    }
+    .mycollege p {
+        font-size: 0.85em;
+    }
+    .mycollege h5 {
+        font-size: 0.9em;
+    }
+    .mycontact p {
+        font-size: 0.9em;
+    }
+    .mypfp img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+
+/*ABOUT DIV END*/
+/*---------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------------------------------------*/
+/*Project DIV Start*/
+
+
+
+/* --- Add this if .about-header doesn't exist or needs specific styling --- */
+.projects-header {
+    /* If this is the direct container for h1 and you want h1 to fill it */
+    width: 100%; /* Ensure it spans the full width */
+    margin: 0; /* Remove any default margins */
+    padding: 0; /* Remove any default paddings */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8); /* Optional: A subtle shadow for the sticky bar */
+    /* If you want the h1 to start immediately at the top of the viewport,
+       ensure no margin/padding on body or preceding elements pushes it down. */
+}
+
+.projects-header h1 {
+    background-color: #2D2A29; /* Black background */
+    color: #EEE5D8;
+    font-family: 'Black Mango'; /* Added fallback font */
+    min-height: 50vh; /* Minimum height of the black section */
+
+    /* --- ADD/MODIFY THESE PROPERTIES --- */
+    width: 100%; /* Ensure the h1 takes full width */
+    margin: 0; /* Remove default margin from h1 */
+    padding: 0; /* Remove default padding from h1 */
+    display: flex; /* Use flexbox to center the text */
+    justify-content: center; /* Horizontally center the text */
+    align-items: center; /* Vertically center the text */
+    text-align: center; /* Fallback for older browsers, good practice */
+
+    /* Optional: Adjust font size for responsiveness */
+    font-size: clamp(2em, 6vw, 4em); /* Responsive font size */
+
+    /* To place it exactly at the top, ensure no other elements above it have margin/padding
+       that push it down, or use a negative margin if necessary (less common).
+       It will naturally sit at the top if it's the first element after the nav-full-width-wrapper. */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- PROJECTS CONTAINER (The overall white card) --- */
+.projects-container {
+    max-width: 1200px; /* Max width of the content area */
+    margin: 50px auto; /* Center horizontally, add vertical spacing */
+    padding: 50px; /* Padding inside the container */
+    background-color: #ffffff; /* White background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    box-sizing: border-box; /* Include padding in width calculation */
+    
+    cursor: pointer; /* Indicate it's interactive */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+
+
+.projects-container:hover {
+    transform: scale(1.025); /* Enlarge by 10% on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
+
+/* --- PROJECTS CONTENT (Holds description and buttons) --- */
+.projects-content {
+    display: flex; /* Use flexbox to stack description and buttons vertically */
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    gap: 30px; /* Space between description and button container */
+}
+
+/* --- PROJECTS DESCRIPTION (The dark rounded rectangle) --- */
+.projects-desc {
+    background-color: #2D2A29; /* Dark background */
+    color: white;
+    border-radius: 15px; /* Rounded corners */
+    padding: 30px 40px; /* Generous padding inside */
+    text-align: left; /* Center text within the description box */
+    max-width: 800px; /* Limit width for readability */
+    width: 100%; /* Take full width of its container (projects-content) */
+    box-sizing: border-box;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    font-family: 'Glacial Indifference Regular';
+}
+
+.projects-desc .activities-title {
+    font-size: clamp(2.3em, 4.5vw, 3em); /* Responsive font size */
+    color: #FF7B51; /* Orange/reddish color for "Activities" */
+    font-weight: bold;
+    margin-top: 30px;
+    font-family: 'Black Mango';
+}
+
+.projects-desc p {
+    font-size: clamp(1em, 2.3vw, 1.4em); /* Responsive font size */
+    margin: 30px;
+}
+
+.projects-desc .highlight-text {
+    color: #FFD25B; /* Orange/yellowish color for highlighted text */
+    font-weight: bold;
+}
+
+/* --- MY WORKS BUTTONS CONTAINER (Holds all the buttons) --- */
+.myworksbuttons-container {
+    display: grid; /* Use CSS Grid for the button layout */
+    /* Define 4 columns with equal flexible space */
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 20px; /* Space between buttons */
+    max-width: 900px; /* Limit width of the button grid */
+    width: 100%; /* Take full width of projects-content */
+    justify-items: center; /* Center buttons within their grid cells */
+    align-items: center; /* Vertically center buttons in their grid cells */
+}
+
+/* --- Individual MY WORKS Buttons (Dark pill-shaped buttons) --- */
+.myworks {
+    display: flex; /* Use flex to center text inside button */
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px; /* Padding inside buttons */
+    background-color: #2D2A29; /* Dark background */
+    color: white;
+    border: none; /* Remove default button border */
+    border-radius: 50px; /* Pill shape */
+    font-size: clamp(0.9em, 1.8vw, 1.1em); /* Responsive font size */
+    font-weight: bold;
+    cursor: pointer; /* Indicate it's clickable */
+    text-transform: uppercase; /* Uppercase text */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    min-width: 100px; /* Minimum width for buttons */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    white-space: nowrap; /* Prevent text wrapping */
+    text-decoration: none;
+}
+
+.myworks:hover {
+    background-color: #0064a7; /* Example hover color (e.g., green) */
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 8px 15px rgba(91, 91, 91, 0.3); /* More pronounced shadow */
+}
+
+/*
+ Specific styling for FINALS and GROUP buttons to center them on their own row 
+.myworksbuttons-container .final-group {
+    /* grid-column: span 2; */ /* Uncomment this if you want them to span 2 columns each,
+                                  but still be on a new row */
+    /* Instead, we'll handle this in media queries for better control over rows 
+}  */
+
+
+/* --- Responsive Adjustments --- */
+
+/* For screens smaller than 1024px (e.g., larger tablets, small laptops) */
+@media (max-width: 1024px) {
+    .projects-container {
+        padding: 25px;
+    }
+    .projects-desc {
+        padding: 25px 30px;
+    }
+    .myworksbuttons-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on tablets */
+        gap: 15px;
+    }
+    /* Adjust FINALS and GROUP to span if needed for 3-column layout */
+    .myworksbuttons-container .final-group {
+        grid-column: span 1; /* Ensure they don't break the 3-column layout */
+    }
+}
+
+/* For screens smaller than 768px (e.g., tablets) */
+@media (max-width: 768px) {
+    .projects-container {
+        margin: 30px auto;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .projects-desc {
+        padding: 20px 25px;
+    }
+    .myworksbuttons-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller tablets */
+        gap: 10px;
+    }
+    /* Adjust FINALS and GROUP to span for 2-column layout */
+    .myworksbuttons-container .final-group {
+        grid-column: span 1; /* Reset for 2-column layout */
+    }
+    /* To make FINALS and GROUP center on their own row in a 2-column layout: */
+    /* You'd need to add a wrapper around them or use specific grid placement */
+    /* For simplicity, they will align with other items in a 2-column grid. */
+}
+
+/* For screens smaller than 480px (e.g., mobile phones) */
+@media (max-width: 480px) {
+    .projects-container {
+        margin: 20px auto;
+        padding: 15px;
+        border-radius: 8px;
+    }
+    .projects-desc {
+        padding: 15px 20px;
+    }
+    .projects-desc .activities-title {
+        font-size: 1.5em;
+    }
+    .projects-desc p {
+        font-size: 0.85em;
+    }
+    .myworksbuttons-container {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 8px;
+    }
+    .myworks {
+        padding: 12px 20px;
+        font-size: 0.9em;
+        width: 100%; /* Make buttons fill width when stacked */
+        min-width: unset; /* Remove min-width for full flexibility */
+    }
+    /* FINALS and GROUP will naturally stack and center in 1-column layout */
+}
+
+
+
+/* --- NEW: The Hoverable Card Container --- */
+.project-card-hoverable {
+    background-color: #ffffff; /* White background as requested */
+    border-radius: 15px; /* Rounded corners for the card */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Initial subtle shadow */
+    
+    /* Responsive sizing for the card */
+    width: 90%; /* Take 90% of parent's width */
+    max-width: 800px; /* Max width for readability on large screens */
+    
+    padding: 70px; /* Internal space inside the card */
+    box-sizing: border-box; /* Include padding in width/height */
+    
+    cursor: pointer; /* Indicate it's interactive */
+    overflow: hidden; /* Important for clean hover effect with rounded corners */
+
+    /* --- KEY: Transition for smooth enlargement --- */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+    /* Optional: Add some margin to separate it from other content */
+    margin: 30px auto; /* Center horizontally, add vertical spacing */
+}
+
+/* --- Hover Effect for the Card --- */
+.project-card-hoverable:hover {
+    transform: scale(1.03); /* Enlarge by 3% on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
+
+
+/* --- Existing: group-container (now nested inside project-card-hoverable) --- */
+.group-container {
+    /* Generally, you might not need much styling here if project-card-hoverable handles the main card look. */
+    /* Ensure it doesn't add conflicting backgrounds or paddings. */
+    width: 100%; /* Take full width of its parent */
+    /* Remove any background-color or border if they were here */
+}
+
+/* --- Existing: group-desc --- */
+.group-desc {
+    text-align: center; /* Center the text inside this div */
+    /* Ensure no conflicting backgrounds or shadows here if project-card-hoverable has them */
+}
+
+.group-desc h3 {
+    font-size: clamp(1.5em, 2.5vw, 2em); /* Responsive font size */
+    margin-top: 0; /* Remove default top margin for h3 */
+    margin-bottom: 1em; /* Space below the heading */
+    color: #2D2A29; /* Dark text color */
+    font-family: 'Black Mango';
+}
+
+.group-desc p {
+    font-size: clamp(0.9em, 1.2vw, 1.05em); /* Responsive font size */
+    line-height: 1.6;
+    margin-bottom: 0; /* Remove default bottom margin for p if it's the last element */
+    color: #2D2A29; /* Slightly lighter text color for body text */
+    font-family: 'Glacial Indifference Bold';
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .project-card-hoverable {
+        width: 95%; /* Take more width on tablets */
+        padding: 20px; /* Adjust padding */
+        border-radius: 10px;
+    }
+    .group-desc h3 {
+        font-size: clamp(1.2em, 3vw, 1.8em);
+    }
+    .group-desc p {
+        font-size: clamp(0.85em, 2vw, 1em);
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card-hoverable {
+        width: 98%; /* Take almost full width on mobile */
+        padding: 15px; /* Adjust padding */
+        border-radius: 8px;
+    }
+    .group-desc h3 {
+        font-size: clamp(1em, 4vw, 1.5em);
+    }
+    .group-desc p {
+        font-size: clamp(0.8em, 2.5vw, 0.9em);
+    }
+}
+
+
+
+
+
+
+
+/*Project DIV END*/
+/*---------------------------------------------------------------------*/
+
+
+
+
+            div.footeract {
+                background-color: black;
+                padding: 70px; /* This padding sets the height of the black background area */
+                margin: 0;
+                box-sizing: border-box;
+                
+                min-height: 320px; /* Ensure this div has a defined height */
+                
+                display: flex;
+                justify-content: center; /* Horizontally center content */
+                align-items: center; /* Vertically center content */
+
+                position: relative; /* CRUCIAL: Makes this the positioning context for absolute children */
+                overflow: hidden; /* Clips image if it overflows due to object-fit: cover */
+                box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.3);
+            }
+
+            .imgfooter {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                
+                position: absolute; /* CRUCIAL: Position the image absolutely within its parent */
+                top: 0;
+                left: 0;
+                z-index: 1; /* Place image below the text */
+            }
+
+            /* --- ADD THIS NEW CSS RULE FOR THE OVERLAY TEXT --- */
+            .overlay-text-act {
+                position: absolute; /* Position relative to .headeract1 */
+                top: 50%; /* Start at the vertical center */
+                left: 50%; /* Start at the horizontal center */
+                transform: translate(-50%, -50%); /* CRUCIAL: Adjust to truly center the element */
+                
+                color: #EEE5D8; /* Text color */
+                text-align: center; /* Center the text within this div */
+                width: 80%; /* Control text width for responsiveness */
+                max-width: 600px; /* Max width for readability */
+                
+                z-index: 2; /* Place text above the image */
+            }
+
+
+            .overlay-text-act p.actdesc {
+                font-family: 'Black Mango'; /* Default serif font, similar to your image */
+                font-size: clamp(3em, 5vw, 4em); /* Responsive font size */
+                margin: 0; /* Remove default h1 margins */
+                padding: 0;
+                font-weight: normal; /* Adjust font weight to match image */
+            }
+
+
+
+
+            .projects-footer {
+                /* If this is the direct container for h1 and you want h1 to fill it */
+                width: 100%; /* Ensure it spans the full width */
+                margin: 0; /* Remove any default margins */
+                padding: 0; /* Remove any default paddings */
+                box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.8);
+                /* If you want the h1 to start immediately at the top of the viewport,
+                ensure no margin/padding on body or preceding elements pushes it down. */
+            }
+
+            .projects-footer p {
+                background-color: #2D2A29; /* Black background */
+                color: #EEE5D8;
+                font-family: 'Black Mango'; /* Added fallback font */
+                min-height: 20vh; /* Minimum height of the black section */
+
+                /* --- ADD/MODIFY THESE PROPERTIES --- */
+                width: 100%; /* Ensure the h1 takes full width */
+                margin: 0; /* Remove default margin from h1 */
+                padding: 0; /* Remove default padding from h1 */
+                display: flex; /* Use flexbox to center the text */
+                justify-content: center; /* Horizontally center the text */
+                align-items: center; /* Vertically center the text */
+                text-align: center; /* Fallback for older browsers, good practice */
+
+                /* Optional: Adjust font size for responsiveness */
+                font-size: clamp(1em, 1vw, 2em); /* Responsive font size */ 
+
+                /* To place it exactly at the top, ensure no other elements above it have margin/padding
+                that push it down, or use a negative margin if necessary (less common).
+                It will naturally sit at the top if it's the first element after the nav-full-width-wrapper. */
+            }
+
+
+/*--------------------------------END-----of-------CSS---------------------------------------*/
+
+
+
