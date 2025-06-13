@@ -1,0 +1,1584 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {  /*style for body*/
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Optional: Responsive typography */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+/*----------------------------------*/
+/* HEADER STYLE */
+div.headerstyle {
+    background-color: rgb(28, 59, 94);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.headertitle {
+  display: flex;
+  align-items: center;   /* Vertically center logo and text */
+  gap: 20px;             /* Space between logo and text */
+  padding: 20px;
+}
+
+.headerlogo {
+  flex-shrink: 0;        /* Prevent the logo from shrinking */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align logo to the left */
+}
+
+.headerpbsp {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  border: 2px solid white;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.title h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.title p {
+  margin: 5px 0 0;
+  color: #ffffff;
+}
+
+
+.title a {
+  margin: 5px 0 0;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+
+div.headertitle {
+    color: white;
+    margin: 0;
+
+}
+
+
+
+
+
+
+
+/*navigation bar style and sizing in the header*/
+.navbar {
+    background-color: rgb(28, 59, 94);
+    padding: 0 0px;
+    font-size: 10px;
+    margin-right: 10px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    justify-content: center; /* Center items horizontally */
+}
+
+.navbar li {
+    margin: 0;
+    margin-right: 3px;
+}
+
+.navbar li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+    white-space: nowrap; /* Prevents text from breaking */
+}
+
+.navbar li a:hover {
+    background-color: rgb(14, 44, 76);
+    border-radius: 10px;
+    transition: background-color 0.6s;
+}
+
+/* Optional: Adjust padding/font size on smaller screens */
+@media screen and (max-width: 600px) {
+    .navbar li a {
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+}
+
+
+
+.backmain {
+  text-decoration: none;
+
+}
+
+.backmain:hover {
+    color: rgb(255, 238, 154);
+    transition: background-color 0.6s;
+}
+
+
+/* HEADER STYLE   END*/
+/*----------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------*/
+/*BODY STYLE START (Content)*/
+
+
+
+/*-----INDEX.html----start-----*/   /*CSS for Index Page*/
+
+.photodocument {  /*This is for the landing page swipable media using touchpad, or arrow button desktop*/
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  gap: 20px;
+  padding: 10px;
+
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;    /* IE 10+ */
+}
+
+.photodocument::-webkit-scrollbar {
+  display: none;               /* Chrome, Safari, Opera */
+}
+
+.pics {
+  height: 250px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+
+
+.milestone {   
+  text-align: center;
+  margin-top: 20px;
+}
+
+.milestone a {
+  padding: 10px 15px;
+  background-color: #0e3469;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: 600;
+
+  border: 1px solid #0e3469;
+  border-radius: 20px;
+}
+
+.milestone a:hover {
+  background-color: rgb(255, 255, 255);
+  color: #0e3469;
+  border: 3px solid #0e3469;
+}
+
+
+
+
+/*--BOOKMARK start---*/              /*This is the bookmark style for each section*/
+
+.bookmarkpg1 {
+  padding: 10px 20px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  overflow-x: auto; /* Enables horizontal scroll if screen is too small */
+}
+
+.bookmarkpg1 ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap; /* Prevents bookmarks from wrapping */
+  gap: 15px;
+}
+
+.bookmarkpg1 li {
+  display: inline;
+  flex-shrink: 0; /* Prevents shrinking */
+}
+
+.bookmarkpg1 a.bookmark1 {
+  display: inline-block;
+  white-space: nowrap; /* Prevents text from wrapping */
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: rgb(142, 142, 142);
+  border: 1px solid rgb(212, 212, 212);
+  border-radius: 5px;
+  font-weight: 100;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.bookmarkpg1 a.bookmark1:hover {
+  background-color: #f1f1f1;
+  transition: background-color 0.6s;
+}
+
+
+/* Optional: Hide scrollbar (scroll still works) 
+.bookmarkpg1::-webkit-scrollbar {
+  display: none;
+}
+*/
+
+/*--------BOOKMARK end-------*/
+
+
+
+
+div.bodystyle {
+    background-color: white;
+    min-height: 100vh; /* optional: ensures full page height */
+    padding-bottom: 100px; /* optional: spacing above footer */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+
+/*Chapter 1 Page 1 (Still Inside Index)*/            /* This page is for the brief description of the organization, mmission, and vision*/ 
+
+.desc1 h3 {
+    color: rgb(17, 94, 225);
+    font-size: x-large;
+
+}
+
+
+
+/* Use Flexbox for layout */
+div.chapt1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 60px 70px 0 70px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 10px;
+    background-color: #efefef;
+    padding-bottom: 70px;
+}
+
+/* Shared style for all cards */
+div.desc1, div.desc2, div.desc3, div.desc4 {
+    flex: 1 1 40%; /* allows 2 per row; adjust 40% as needed */
+    min-width: 300px;
+}
+
+/* Make desc1 text darker to match original */
+div.desc1 {
+    color: black;
+    background-color: white;
+    font-size: medium;
+    font-weight: bold;
+
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 20px;
+    transition: background-color 0.9s ease, color 0.9s ease, border-color 0.9s ease;
+}
+
+div.desc1:hover{
+    background-color: rgb(30, 30, 30); /* Darker or lighter shade */
+    border: 1px solid rgb(30, 30, 30);
+    color: rgb(255, 255, 255); /* Optional lighter greenish-white */
+    cursor: pointer;
+}
+
+
+
+
+
+div.desc2 {
+    color: rgb(30, 30, 30);
+    background-color: rgb(255, 255, 255);
+    font-size: medium;
+    font-weight: 500;
+
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 20px;
+    transition: background-color 0.9s ease, color 0.9s ease, border-color 0.9s ease;                        
+}
+
+div.desc2:hover {
+    background-color: rgb(30, 30, 30); /* Darker or lighter shade */
+    border: 1px solid rgb(30, 30, 30);
+    color: rgb(255, 255, 255); /* Optional lighter greenish-white */
+    cursor: pointer;
+
+}
+
+
+
+div.desc3 {
+    color: rgb(255, 255, 255);
+    background-color: rgb(28, 59, 94);
+    font-size: medium;
+    font-weight: bold;
+
+    border: 1px solid rgb(28, 59, 94);
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: background-color 0.9s ease, color 0.9s ease, border-color 0.9s ease;
+}
+
+div.desc3:hover {
+    background-color: rgb(0, 0, 0); /* Darker or lighter shade */
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(255, 255, 255); /* Optional lighter greenish-white */
+    cursor: pointer;
+
+}
+
+
+
+div.desc4 {
+    color: rgb(255, 255, 255);
+    background-color: rgb(28, 59, 94);
+    font-size: medium;
+    font-weight: bold;
+
+    border: 1px solid rgb(28, 59, 94);
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: background-color 0.9s ease, color 0.9s ease, border-color 0.9s ease;
+}
+
+div.desc4:hover {
+    background-color: rgb(0, 0, 0); /* Darker or lighter shade */
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(255, 255, 255); /* Optional lighter greenish-white */
+    cursor: pointer;
+
+}
+
+
+
+
+
+
+/* Optional: Add heading spacing or styles */
+div.chapt1 h3 {
+    margin-top: 0;
+}
+
+.photoheadline {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px; /* optional for rounded corners */
+    margin-bottom: 10px;
+}
+
+img.headline {
+    width: 100%;         /* make image fit the container */
+    height: auto;        /* maintain aspect ratio */
+    display: block;      /* removes bottom spacing */
+    border-radius: 8px;  /* optional, matches container */
+    object-fit: cover;   /* optional: crop edges if needed */
+}
+
+
+/*---------------------------------------------------------*/
+
+
+
+
+/*Chapter 2 Page 1 (inside Index)*/   /*This page is for the board members*/
+
+div.chapt2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 60px;
+}
+
+.board {    /*style title for board*/
+    color: rgb(11, 168, 113);
+    font-size: 30px;
+    text-align: left;
+}
+
+div.desc5 {   /*styled description*/
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 20px;
+
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-top: 30px;
+    text-align: justify;
+}
+
+.boardcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers items horizontally */
+    gap: 20px;
+    margin-top: 45px;
+    margin-left: auto;   /* These two lines center the whole container */
+    margin-right: auto;
+    max-width: 900px;   /* Optional: limits container width for better centering */
+}
+
+
+
+.trustee {
+    background-color: #efefef;
+    border: 1px solid #efefef;
+    border-radius: 8px;
+    padding: 15px;
+    width: 250px; /* Adjust width as needed */
+    color: rgb(126, 126, 126);
+    transition: background-color 0.9s ease, color 0.9s ease, border-color 0.9s ease;
+
+}
+
+
+div.trustee:hover  {
+    background-color: rgb(217, 222, 219); /* Darker or lighter shade */
+    border: 1px solid rgb(217, 222, 219);
+    cursor: pointer;
+    color: #5b6778;
+}
+
+
+
+.name {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.position {
+    font-style: italic;
+    font-size: 17px;
+    color: rgb(2, 146, 96);
+    margin-bottom: 10px;
+}
+
+
+.profiletrustee {
+    display: flex;
+    justify-content: center; /* horizontally center */
+    align-items: center;     /* vertically center if you want */
+    margin-bottom: 10px;
+}
+
+.pfp {
+    width: 100px;           /* adjust size as needed */
+    height: 100px;
+    border-radius: 50%;     /* makes it circular */
+    object-fit: cover;      /* ensures image doesn't stretch */
+    border: 2px solid #ffffff; /* optional border */
+}
+
+.members {
+    color: rgb(11, 168, 113);
+    font-size: 30px;
+    text-align: center;
+}
+
+div.desc6 {
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 20px;
+
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-top: 30px;
+}
+
+
+div.chapt3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 60px;
+    margin-bottom: 10px;
+
+    background-color: #f1f1f1;
+    padding-bottom: 70px;
+}
+
+.team {
+    color: rgb(235, 197, 6);
+    font-size: 30px;
+}
+
+div.desc7 {
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 20px;
+
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-top: 30px;
+    text-align: justify;
+}
+
+
+
+.teamcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  /* Centers items horizontally */
+    gap: 20px;
+    margin-top: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 900px;         /* Optional max width */
+}
+
+.teamMember {
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    padding: 15px;
+    width: 250px;
+    transition: background-color 0.9s ease, color 0.9s ease, border-color 0.9s ease;
+
+}
+
+
+div.teamMember:hover  {
+    background-color: rgb(227, 226, 220); /* Darker or lighter shade */
+    border: 1px solid rgb(227, 226, 220);
+    cursor: pointer;
+}
+
+
+
+
+.profileteam {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.pfpteam {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffffff;
+}
+
+.nameteam {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.positionteam {
+    font-style: italic;
+    font-size: 17px;
+    color: rgb(179, 149, 0);
+    margin-bottom: 10px;
+}
+ /*--------INDEX.html---end-----*/  /*Index Page end*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+/*---PROGRAMS.html-----start--*/    /*This is for the programs page*/
+
+/* Flex container for section1 */
+.section1, .section3 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px 60px 60px 60px; /* Slightly smaller padding */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #f0f0f0;
+  margin-bottom: 10px;
+  padding-left: 140px;
+  padding-right: 140px;
+}
+
+/* Slightly smaller header and card blocks */
+.prgdesc1{
+  flex: 1 1 35%; /* Slightly smaller width (was 40%) */
+  min-width: 220px; /* Smaller minimum width */
+  background-color: white;
+  padding: 25px; /* Slightly reduced padding */
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+  font-weight: normal;
+  transition: background-color 0.9s ease, color 0.9s ease, border-color 0.9s ease;
+
+   /* Prevent awkward word breaks */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+
+}
+
+
+.empty {
+  flex: 1 1 35%; /* Slightly smaller width (was 40%) */
+  min-width: 220px; /* Smaller minimum width */
+  background-color: transparent;
+  padding: 25px; /* Slightly reduced padding */
+  border-radius: 10px;
+  border: 1px solid transparent;
+  font-weight: normal;
+}
+
+
+
+.prgdesc1:hover  {
+    background-color: rgb(36, 49, 61); /* Darker or lighter shade */
+    border: 1px solid rgb(36, 49, 61);
+    color: rgb(255, 255, 255); /* Optional lighter greenish-white */
+    cursor: pointer;
+}
+
+
+
+
+/* Optional: style for h3 topic */
+.topic {
+  color: rgb(17, 94, 225);
+  margin-top: 10px;
+}
+
+/* Slightly smaller and consistent image styling */   /*Sizing of Image*/
+.progimg { 
+  width: 80%; /* Slightly smaller image */
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+
+.health {  /*Program (Health) Topic Header*/
+  background-color: rgb(171, 21, 21);
+  color: white;
+  text-align: justify;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid rgb(171, 21, 21);
+  font-weight: normal;
+  max-width: 950px;      /* Restricts width on large screens */
+  width: 100%;            /* Responsive width for smaller screens */
+  margin: 0 auto;        /* Centers the box */
+  box-sizing: border-box;
+  transition: background-color 0.9s ease, color 0.9s ease, border-color 0.9s ease;
+
+   /* Prevent awkward word breaks */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/*
+.health:hover, .education:hover, .environment:hover, 
+.livelihood:hover, .covid:hover,  .collective:hover{
+  border: 1px solid rgb(28, 59, 94);
+  background-color: rgb(9, 35, 54);
+}
+*/
+
+
+/* Optional: Reduce padding slightly on very small screens */
+@media (max-width: 600px) {
+  .health {
+    padding: 20px 15px;
+  }
+}
+
+
+
+.health h3 {
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.health p {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+
+
+
+
+.section2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px 60px 60px 60px; /* Slightly smaller padding */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  padding-left: 140px;
+  padding-right: 140px;
+}
+
+.education {   /*Program (Educ) Topic Header*/
+  background-color: rgb(217, 177, 0);
+  color: white;
+  text-align: justify;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid rgb(217, 177, 0);
+  font-weight: normal;
+  max-width: 950px;      /* Restricts width on large screens */
+  width: 100%;            /* Responsive width for smaller screens */
+  margin: 0 auto;        /* Centers the box */
+  box-sizing: border-box;
+  transition: background-color 0.9s ease, color 0.9s ease, border-color 0.9s ease;
+
+   /* Prevent awkward word breaks */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+
+}
+
+
+/* Optional: Reduce padding slightly on very small screens */
+@media (max-width: 600px) {
+  .education {
+    padding: 20px 15px;
+  }
+}
+
+
+
+.education h3 {
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.education p {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+
+
+
+
+
+.environment {  /*Program (Environment) Topic Header*/
+  background-color: rgb(41, 145, 20);
+  color: white;
+  text-align: justify;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid rgb(41, 145, 20);
+  font-weight: normal;
+  max-width: 950px;      /* Restricts width on large screens */
+  width: 100%;            /* Responsive width for smaller screens */
+  margin: 0 auto;        /* Centers the box */
+  box-sizing: border-box;
+  transition: background-color 0.9s ease, color 0.9s ease, border-color 0.9s ease;
+
+   /* Prevent awkward word breaks */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+
+}
+
+/* Optional: Reduce padding slightly on very small screens */
+@media (max-width: 600px) {
+ .environment {
+    padding: 20px 15px;
+  }
+}
+
+
+
+.environment h3 {
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.environment p {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+
+
+
+
+
+
+.section4, .section6 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px 60px 60px 60px; /* Slightly smaller padding */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  padding-left: 140px;
+  padding-right: 140px;
+}
+
+
+.livelihood { /*Program (livelihood) Topic Header*/
+  background-color: rgb(216, 34, 113);
+  color: white;
+  text-align: justify;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid rgb(216, 34, 113);
+  font-weight: normal;
+  max-width: 950px;      /* Restricts width on large screens */
+  width: 100%;            /* Responsive width for smaller screens */
+  margin: 0 auto;        /* Centers the box */
+  box-sizing: border-box;
+  transition: background-color 0.9s ease, color 0.9s ease, border-color 0.9s ease;
+
+   /* Prevent awkward word breaks */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+
+
+}
+
+/* Optional: Reduce padding slightly on very small screens */
+@media (max-width: 600px) {
+.livelihood {
+    padding: 20px 15px;
+  }
+}
+
+
+
+.livelihood h3 {
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.livelihood p {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+
+
+
+
+.section5 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px 60px 60px 60px; /* Slightly smaller padding */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #f0f0f0;
+  margin-bottom: 10px;
+  padding-left: 140px;
+  padding-right: 140px;
+}
+
+
+.covid {   /*Program (covid response) Topic Header*/
+  background-color: rgb(91, 55, 169);
+  color: white;
+  text-align: justify;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid rgb(91, 55, 169);
+  font-weight: normal;
+  max-width: 950px;      /* Restricts width on large screens */
+  width: 100%;            /* Responsive width for smaller screens */
+  margin: 0 auto;        /* Centers the box */
+  box-sizing: border-box;
+  transition: background-color 0.9s ease, color 0.9s ease, border-color 0.9s ease;
+
+   /* Prevent awkward word breaks */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+
+
+}
+
+/* Optional: Reduce padding slightly on very small screens */
+@media (max-width: 600px) {
+.covid {
+    padding: 20px 15px;
+  }
+}
+
+
+
+.covid h3 {
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.covid p {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+
+
+
+.collective {    /*Program (Collective) Topic Header*/
+  background-color: rgb(210, 98, 23);
+  color: white;
+  text-align: justify;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid rgb(210, 98, 23);
+  font-weight: normal;
+  max-width: 950px;      /* Restricts width on large screens */
+  width: 100%;            /* Responsive width for smaller screens */
+  margin: 0 auto;        /* Centers the box */
+  box-sizing: border-box;
+  transition: background-color 0.9s ease, color 0.9s ease, border-color 0.9s ease;
+
+   /* Prevent awkward word breaks */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+
+
+}
+
+/* Optional: Reduce padding slightly on very small screens */
+@media (max-width: 600px) {
+.collective {
+    padding: 20px 15px;
+  }
+}
+
+
+
+.collective h3 {
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.collective p {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: justify;
+}
+
+
+.prgdesc1 a  {
+    color: rgb(0, 110, 255);
+    font-size: 15px;
+    font-weight: 600;
+    text-align: justify;
+}
+
+
+
+
+
+/*Banner for anniversary page*/
+.anniversary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 90px auto 20px;
+  max-width: 1000px;
+  background-color: #f4f0e0;
+  font-family: Arial, sans-serif;
+}
+
+/* Image container */
+.anniv {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.anniv img.anniv {
+  max-width: 100%;
+  height: auto;
+  border-radius: 3px;
+}
+
+/* Text container */
+.annivtext {
+  flex: 1 1 300px;
+
+}
+
+.annivtext h3, .annivtext h5 {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #a28700;
+}
+
+.annivtext p {
+  font-size: 0.9rem;
+  margin: 10px 0 20px;
+}
+
+.annivtext a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #d4b100;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.annivtext a:hover {
+  background-color: #a98d00;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 600px) {
+  .anniversary {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .annivtext h3 {
+    font-size: 1rem;
+  }
+
+  .annivtext p {
+    font-size: 0.85rem;
+  }
+}
+
+/*---PROGRAMS.html-----end--*/   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---OPPORTUNITIES.html-----start--*/   /*Start of opportunities page*/
+
+div.pg3sec1 {
+  padding: 40px 20px; /* Top-bottom | Left-right */
+  background-color: #eaeaea; /* Optional background */
+}
+
+div.oppsection {
+  width: 90%;                  /* responsive width */
+  max-width: 800px;            /* upper limit */
+  margin: 20px auto;           /* center with vertical space */
+  padding: 15px 5%;            /* responsive horizontal padding */
+  border: 1px solid rgb(80, 89, 97);
+  border-radius: 10px;
+  background-color: rgb(80, 89, 97);
+  color: white;
+  text-align: justify;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  transition: background-color 0.9s ease, color 0.9s ease, border-color 0.9s ease;
+  box-sizing: border-box;
+
+   /* Prevent awkward word breaks */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+  div.oppsection {
+    padding: 15px 4%;
+    font-size: 14px;
+  }
+}
+
+
+
+div.oppsection:hover {
+    background-color: rgb(14, 14, 14); /* Darker or lighter shade */
+    border: 1px solid rgb(14, 14, 14);
+    color: rgb(255, 255, 255); /* Optional lighter greenish-white */
+    cursor: pointer;
+}
+
+
+.oppsection h4 {
+  color: rgb(136, 255, 174);
+}
+
+.oppsection a {
+  color: white;
+}
+
+
+
+
+
+div.helpways {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto; /* This centers the div */
+  padding: 10px;
+  padding-bottom: 70px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.helpways h2 {
+    font-size: 40px;
+    color: #1d75d8;
+    font-weight: 900;
+}
+
+.helpways p {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+
+
+
+
+
+
+
+div.pg3sec2 {
+  padding: 40px 20px; /* Top-bottom | Left-right */
+  background-color: #ffffff; /* Optional background */
+}
+
+
+
+/*style for partner button*/
+div.partner {
+  width: 90%;                  /* Responsive width */
+  max-width: 950px;            /* Max limit for larger screens */
+  margin: 20px auto;           /* Centered with vertical spacing */
+  padding: 25px 5%;            /* Responsive padding */
+  border: 1px solid #1d75d8;
+  border-radius: 10px;
+  background-color: #1d75d8;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  box-sizing: border-box;      /* Includes padding in width */
+
+   /* Prevent awkward word breaks */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+
+
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
+}
+
+
+div.partner:hover, div.donate:hover, div.join:hover {
+  background-color: #002949;
+  border: 1px solid #002949;
+  color: white;
+}
+
+
+
+.symbol {
+  margin: 10px;         /* Equal spacing on all sides */
+  width: 30px;          /* Fixed width */
+  height: auto;         /* Maintain aspect ratio */
+  vertical-align: middle; /* Aligns with text baseline */
+}
+
+
+
+
+
+
+
+
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 600px) {
+  div.partner, div.donate, div.join {
+    padding: 20px 4%;
+    font-size: 14px;
+  }
+}
+
+
+.partnerdesc, .donatedesc, .joindesc {
+    font-size: 20px;
+    font-weight: normal;
+    margin-left: 30px;
+}
+
+.partner h2, .donate h2, .join h2 {
+    font-size: 30px;
+    margin-left: 30px;
+}
+
+
+.partner a, .donate a, .join a {
+    font-size: 20px;
+    margin-left: 30px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 5px 25px;
+    text-align: center;
+
+
+
+    display: inline-flex;
+    align-items: center;
+    gap: 3px; /* space between text and image */
+    font-weight: bold;
+
+
+
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+
+
+.partner a:hover, .donate a:hover, .join a:hover {
+    color: rgb(255, 255, 255);
+    border: 1px solid #1d75d8;
+    background-color: #1d75d8;
+}
+
+
+
+
+
+
+
+div.pg3sec3 {
+  padding: 40px 20px; /* Top-bottom | Left-right */
+  background-color: #eaeaea; /* Optional background */
+}
+
+/*style for donate button*/
+div.donate {
+  width: 90%;                  /* Responsive width */
+  max-width: 950px;            /* Max limit for larger screens */
+  margin: 20px auto;           /* Centered with vertical spacing */
+  padding: 25px 5%;            /* Responsive padding */
+  border: 1px solid #1d75d8;
+  border-radius: 10px;
+  background-color: #1d75d8;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  box-sizing: border-box;      /* Includes padding in width */
+
+   /* Prevent awkward word breaks */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+
+
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
+}
+
+
+
+
+
+div.pg3sec4 {
+  padding: 40px 20px; /* Top-bottom | Left-right */
+  background-color: #ffffff; /* Optional background */
+}
+
+/*style for join button*/
+div.join {
+  width: 90%;                  /* Responsive width */
+  max-width: 950px;            /* Max limit for larger screens */
+  margin: 20px auto;           /* Centered with vertical spacing */
+  padding: 25px 5%;            /* Responsive padding */
+  border: 1px solid #1d75d8;
+  border-radius: 10px;
+  background-color: #1d75d8;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  box-sizing: border-box;      /* Includes padding in width */
+
+   /* Prevent awkward word breaks */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
+}
+
+/*---OPPORTUNITIES.html-----end--*/
+
+
+/* BODY STYLE -------END    */
+/*----------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------*/
+/* FOOTER STYLE START*/
+
+
+/*subscribe section of footer, div*/
+.subscribefooter {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #122c49;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+}
+
+.subscribefooter h4 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.subscribefooter p {
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.subscribefooter .inputbox {  
+    width: 80%;
+    max-width: 400px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.subscribefooter .subscribeinput {
+    padding: 12px 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.subscribefooter .subscribeinput:hover {
+    background-color: #021b2c;
+    color: white;
+}
+
+/* Responsive tweaks */
+@media screen and (max-width: 480px) {
+    .subscribefooter {
+        padding: 20px 15px;
+    }
+
+    .subscribefooter .inputbox {
+        width: 100%;
+    }
+
+    .subscribefooter .submission {
+        width: 100%;
+    }
+}
+
+
+
+div.footermain {   /*main structure for footer*/
+    background-color: rgb(28, 59, 94);
+    padding-bottom: 50px;
+}
+
+
+
+div.footerstyle {    /*container for texts*/
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 20px;
+    padding-bottom: 20px; /* reduce from 80px unless you want a tall footer */
+    background-color: rgb(28, 59, 94);
+    gap: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.pbsp {
+  width: 140px;       /* Shrinks the logo */
+  height: auto;      /* Keeps aspect ratio */
+  object-fit: contain;
+  border-radius: 5px;  /* Optional rounded corners */
+
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px; /* Optional spacing */
+}
+
+
+
+
+div.footertitle {  /*title of NPO*/
+    color: rgb(255, 255, 255);
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 5px;
+    font-size: small;
+    font-weight: 600;
+}
+
+div.footer1,    /*Size of each text (contact information)*/
+div.footer2,
+div.footer3 {
+    color: white;
+    padding: 10px;
+    font-size: x-small;
+    width: 10%;
+}
+
+
+
+/*----------------------------------*/
+
+
